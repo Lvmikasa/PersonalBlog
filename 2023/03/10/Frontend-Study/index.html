@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="HTML51、基本标签CSS1、初识CSS如何学习  CSS是什么 CSS怎么用（快速入门） CSS选择器（重点+难点） 美化网页（文字，阴影，超链接，列表，渐变等等等等……） 盒子模型 浮动 定位 网页动画(特效效果)  w3school **菜鸟教程 ** 1.1、什么是CSSCascading Style Sheet 层叠级联样式表 CSS:表现（美化网页） 字体，颜色，边距，高度，宽度，背">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Frontend Study">
+<meta property="og:url" content="http://example.com/2023/03/10/Frontend-Study/index.html">
+<meta property="og:site_name" content="五陵花柳满秦川">
+<meta property="og:description" content="HTML51、基本标签CSS1、初识CSS如何学习  CSS是什么 CSS怎么用（快速入门） CSS选择器（重点+难点） 美化网页（文字，阴影，超链接，列表，渐变等等等等……） 盒子模型 浮动 定位 网页动画(特效效果)  w3school **菜鸟教程 ** 1.1、什么是CSSCascading Style Sheet 层叠级联样式表 CSS:表现（美化网页） 字体，颜色，边距，高度，宽度，背">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-10T12:53:07.000Z">
+<meta property="article:modified_time" content="2023-03-10T12:53:27.978Z">
+<meta property="article:author" content="五陵花柳满秦川">
+<meta property="article:tag" content="dddzzz">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/03/10/Frontend-Study/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/03/10/Frontend-Study/","path":"2023/03/10/Frontend-Study/","title":"Frontend Study"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Frontend Study | 五陵花柳满秦川</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">五陵花柳满秦川</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">LvMikasa</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML5"><span class="nav-number">1.</span> <span class="nav-text">HTML5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE"><span class="nav-number">1.1.</span> <span class="nav-text">1、基本标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number">2.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%88%9D%E8%AF%86CSS"><span class="nav-number">2.1.</span> <span class="nav-text">1、初识CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFCSS"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.1、什么是CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E3%80%81%E5%8F%91%E5%B1%95%E5%8F%B2"><span class="nav-number">2.1.2.</span> <span class="nav-text">1.2、发展史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E3%80%81%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="nav-number">2.1.3.</span> <span class="nav-text">1.3、快速入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4%E3%80%81CSS%E7%9A%843%E7%A7%8D%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">2.1.4.</span> <span class="nav-text">1.4、CSS的3种导入方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">2、选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E3%80%81%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.1、基本选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E3%80%81%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2、层次选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E3%80%81%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.3、结构伪类选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4%E3%80%81%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%88%E5%B8%B8%E7%94%A8%E7%9A%84%E6%98%82%EF%BC%89"><span class="nav-number">2.2.4.</span> <span class="nav-text">2.4、属性选择器（常用的昂）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E7%BE%8E%E5%8C%96%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0"><span class="nav-number">2.3.</span> <span class="nav-text">3、美化网页元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%BE%8E%E5%8C%96%E7%BD%91%E9%A1%B5"><span class="nav-number">2.3.1.</span> <span class="nav-text">3.1、为什么要美化网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E3%80%81%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="nav-number">2.3.2.</span> <span class="nav-text">3.2、字体样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3%E3%80%81%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F"><span class="nav-number">2.3.3.</span> <span class="nav-text">3.3、文本样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4%E3%80%81%E9%98%B4%E5%BD%B1"><span class="nav-number">2.3.4.</span> <span class="nav-text">3.4、阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5%E3%80%81%E8%B6%85%E9%93%BE%E6%8E%A5%E4%BC%AA%E7%B1%BB"><span class="nav-number">2.3.5.</span> <span class="nav-text">3.5、超链接伪类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6%E3%80%81%E5%88%97%E8%A1%A8"><span class="nav-number">2.3.6.</span> <span class="nav-text">3.6、列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7%E3%80%81%E8%83%8C%E6%99%AF"><span class="nav-number">2.3.7.</span> <span class="nav-text">3.7、背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8%E3%80%81%E6%B8%90%E5%8F%98"><span class="nav-number">2.3.8.</span> <span class="nav-text">3.8、渐变</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.4.</span> <span class="nav-text">4、盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.4.1.</span> <span class="nav-text">4.1、什么是盒子模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2%E3%80%81%E8%BE%B9%E6%A1%86"><span class="nav-number">2.4.2.</span> <span class="nav-text">4.2、边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3%E3%80%81%E5%A4%96%E8%BE%B9%E8%B7%9D"><span class="nav-number">2.4.3.</span> <span class="nav-text">4.3、外边距</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E6%B5%AE%E5%8A%A8"><span class="nav-number">2.5.</span> <span class="nav-text">5、浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1%E3%80%81%E6%A0%87%E5%87%86%E6%96%87%E6%A1%A3%E6%B5%81"><span class="nav-number">2.5.1.</span> <span class="nav-text">5.1、标准文档流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2%E3%80%81display"><span class="nav-number">2.5.2.</span> <span class="nav-text">5.2、display</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3%E3%80%81float"><span class="nav-number">2.5.3.</span> <span class="nav-text">5.3、float</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">3.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFJavaScript"><span class="nav-number">3.1.</span> <span class="nav-text">1、什么是JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="nav-number">3.2.</span> <span class="nav-text">2、快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E3%80%81"><span class="nav-number">3.2.1.</span> <span class="nav-text">2.1、</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E3%80%81"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.2、</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.2.3.</span> <span class="nav-text">2.3、数据类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.3.</span> <span class="nav-text">3、数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.1、字符串</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%87%BD%E6%95%B0"><span class="nav-number">3.4.</span> <span class="nav-text">4、函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E3%80%81%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="nav-number">3.4.1.</span> <span class="nav-text">4.1、定义函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2%E3%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">3.4.2.</span> <span class="nav-text">4.2、变量的作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3%E3%80%81%E6%96%B9%E6%B3%95"><span class="nav-number">3.4.3.</span> <span class="nav-text">4.3、方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E5%86%85%E9%83%A8%E5%AF%B9%E8%B1%A1"><span class="nav-number">3.5.</span> <span class="nav-text">5、内部对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B"><span class="nav-number">3.6.</span> <span class="nav-text">6、面向对象编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81%E6%93%8D%E4%BD%9CBOM%E5%AF%B9%E8%B1%A1%E3%80%90%E9%87%8D%E7%82%B9%E3%80%91"><span class="nav-number">3.7.</span> <span class="nav-text">7、操作BOM对象【重点】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E6%93%8D%E4%BD%9CDOM%E5%AF%B9%E8%B1%A1%E3%80%90%E9%87%8D%E7%82%B9%E3%80%91"><span class="nav-number">3.8.</span> <span class="nav-text">8、操作DOM对象【重点】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9%E3%80%81%E6%93%8D%E4%BD%9C%E8%A1%A8%E5%8D%95%EF%BC%88%E9%AA%8C%E8%AF%81%EF%BC%89"><span class="nav-number">3.9.</span> <span class="nav-text">9、操作表单（验证）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF%E5%81%B7%E6%87%92%E6%A1%86%E6%9E%B6%E7%BD%91"><span class="nav-number">4.</span> <span class="nav-text">前端偷懒框架网</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Element-ui"><span class="nav-number">4.1.</span> <span class="nav-text">Element-ui</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue"><span class="nav-number">5.</span> <span class="nav-text">Vue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%BF%90%E8%A1%8C%E5%88%AB%E4%BA%BA%E7%9A%84%E9%A1%B9%E7%9B%AE"><span class="nav-number">5.1.</span> <span class="nav-text">1.运行别人的项目</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="五陵花柳满秦川"
+      src="https://dddzzz-1316859603.cos.ap-nanjing.myqcloud.com/PicGo4ED828C5821DBAE24AD6B9EC8FAD51E7.jpg">
+  <p class="site-author-name" itemprop="name">五陵花柳满秦川</p>
+  <div class="site-description" itemprop="description">这是阿帅的博客网站</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0x2TWlrYXNh" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;LvMikasa">GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/1872514153@qq.com" title="E-Mail → 1872514153@qq.com" rel="noopener me">E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/10/Frontend-Study/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://dddzzz-1316859603.cos.ap-nanjing.myqcloud.com/PicGo4ED828C5821DBAE24AD6B9EC8FAD51E7.jpg">
+      <meta itemprop="name" content="五陵花柳满秦川">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="五陵花柳满秦川">
+      <meta itemprop="description" content="这是阿帅的博客网站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Frontend Study | 五陵花柳满秦川">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Frontend Study<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL0x2bWlrYXNhL1BlcnNvbmFsQmxvZ19wb3N0cy9Gcm9udGVuZC1TdHVkeS5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-03-10 20:53:07 / 修改时间：20:53:27" itemprop="dateCreated datePublished" datetime="2023-03-10T20:53:07+08:00">2023-03-10</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><h2 id="1、基本标签"><a href="#1、基本标签" class="headerlink" title="1、基本标签"></a>1、基本标签</h2><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="1、初识CSS"><a href="#1、初识CSS" class="headerlink" title="1、初识CSS"></a>1、初识CSS</h2><p><strong>如何学习</strong></p>
+<ul>
+<li><strong>CSS是什么</strong></li>
+<li><strong>CSS怎么用（快速入门）</strong></li>
+<li><strong>CSS选择器（重点+难点）</strong></li>
+<li><strong>美化网页（文字，阴影，超链接，列表，渐变等等等等……）</strong></li>
+<li><strong>盒子模型</strong></li>
+<li><strong>浮动</strong></li>
+<li><strong>定位</strong></li>
+<li><strong>网页动画(特效效果)</strong></li>
+</ul>
+<p><strong>w3school</strong></p>
+<p>**菜鸟教程 **</p>
+<h3 id="1-1、什么是CSS"><a href="#1-1、什么是CSS" class="headerlink" title="1.1、什么是CSS"></a>1.1、什么是CSS</h3><p><strong>Cascading Style Sheet 层叠级联样式表</strong></p>
+<p><strong>CSS:表现（美化网页）</strong></p>
+<p><strong>字体，颜色，边距，高度，宽度，背景图片，网页定位，网页浮动….</strong></p>
+<h3 id="1-2、发展史"><a href="#1-2、发展史" class="headerlink" title="1.2、发展史"></a>1.2、发展史</h3><p><strong>CSS2.0 DIV(块) + CSS HTML与CSS结构分离的思想，网页变得简单，SEO</strong></p>
+<p><strong>CSS2.1 浮动，定位</strong></p>
+<p><strong>CSS3.0 圆角，阴影，动画…..浏览器兼容性</strong></p>
+<h3 id="1-3、快速入门"><a href="#1-3、快速入门" class="headerlink" title="1.3、快速入门"></a>1.3、快速入门</h3><p>**style **</p>
+<p><strong>在html中关联到css文件</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">   &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">style.css文件</span><br><span class="line">h1 &#123;</span><br><span class="line">    color: rgb(108, 1, 231);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>css的优势：</strong></p>
+<p><strong>1、内容和表现分离</strong></p>
+<p><strong>2、网页结构表现统一，可以实现复用</strong></p>
+<p><strong>3、样式十分的丰富</strong></p>
+<p><strong>4、建议使用独立于html的css文件</strong></p>
+<p><strong>5、利用SEO，容易被搜索引擎收录！</strong></p>
+<h3 id="1-4、CSS的3种导入方式"><a href="#1-4、CSS的3种导入方式" class="headerlink" title="1.4、CSS的3种导入方式"></a>1.4、CSS的3种导入方式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;牛逼&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            /* 内部样式 */</span><br><span class="line">            h1&#123;</span><br><span class="line">                /* color: green; */      </span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">        &lt;!-- 导入外部样式 --&gt;</span><br><span class="line">        &lt;link rel=&quot;stylesheet&quot; href=&quot;/CSS/2.导入方式/css/style.css&quot;&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- </span><br><span class="line">            优先级：就近原则，</span><br><span class="line">         --&gt;</span><br><span class="line">        &lt;!-- 行内样式：在标签元素种，编写一个style属性，编写样式即可 --&gt;</span><br><span class="line">        </span><br><span class="line">        &lt;h1 /*style=&quot;color: red;&quot;*/&gt;我是标题&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>拓展：外部样式的两种写法</strong></p>
+<ul>
+<li><strong>链接式</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line"></span><br><span class="line">        &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            &lt;!-- 导入式 --&gt;</span><br><span class="line">            @import url(&quot;css/style.css&quot;);</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;/head&gt;</span><br><span class="line"></span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;h1&gt;我是标题哦哦哦哦哦哦&lt;/h1&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>导入式：上面使用的link标签属于导入式</strong></li>
+</ul>
+<p><strong>导入式属于先加载骨架，显示出来再对网页进行渲染</strong></p>
+<p><strong>上面的链接式属于先使用css渲染完了之后整个加载出来网页,就是一步到位</strong></p>
+<h2 id="2、选择器"><a href="#2、选择器" class="headerlink" title="2、选择器"></a>2、选择器</h2><p><strong>作用：****选择页面上的某一个或者某一类的元素</strong></p>
+<p><strong>原则：****先定位，再美化</strong></p>
+<h3 id="2-1、基本选择器"><a href="#2-1、基本选择器" class="headerlink" title="2.1、基本选择器"></a>2.1、基本选择器</h3><p><strong>1、标签选择器          ：选择一类标签   用法： 标签{}</strong></p>
+<p><strong>2、类</strong>	<strong>选择器  class ：选中所有class属性一致的标签，跨标签 用法: .class{}</strong></p>
+<p><strong>3、id</strong>	<strong>选择器            ：全局唯一!  用法：#id名{}</strong></p>
+<p><strong>优先级：id &gt; class &gt; 标签</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    /* </span><br><span class="line">    id选择器 ：id必须保证全局唯一，，，这个？？？</span><br><span class="line">    使用方法：</span><br><span class="line">    #id名称&#123;&#125;</span><br><span class="line">    这玩意不遵循就近原则，是固定的</span><br><span class="line">    id选择器 &gt; class选择器 &gt; 标签选择器</span><br><span class="line">    就这样用咯</span><br><span class="line">    而且定位越精准，优先级越高</span><br><span class="line">    定位精准排序</span><br><span class="line">    */</span><br><span class="line">    #qinjiang&#123;</span><br><span class="line">    color: burlywood;</span><br><span class="line">    &#125;</span><br><span class="line">    .qinjiang2&#123;</span><br><span class="line">    color: purple;</span><br><span class="line">    &#125;</span><br><span class="line">    h1&#123;</span><br><span class="line">    color: brown;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2、层次选择器"><a href="#2-2、层次选择器" class="headerlink" title="2.2、层次选择器"></a>2.2、层次选择器</h3><p><strong>后代是空格，子选择器是&gt;号,相邻兄弟选择器是+号</strong></p>
+<p><strong>1、后代选择器：在某个元素的后面，祖爷爷   爷爷  爸爸  你</strong></p>
+<p><strong>在祖爷爷后面包括了这三个【 爷爷  爸爸  你】</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* 后代选择器 */</span><br><span class="line">body p&#123;</span><br><span class="line">background-color: aqua;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、子选择器,一代,儿子</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* 子选择器 , 选择后面的一代东西，就是body的儿子*/</span><br><span class="line">body&gt;p&#123;</span><br><span class="line">    background-color:antiquewhite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>**3、相邻兄弟选择器 **	<strong>同辈</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* 兄弟选择器 ,兄弟用的是&quot;+&quot;号*/</span><br><span class="line">.active + p&#123;</span><br><span class="line">background-color: blueviolet;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4、通用选择器</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* 通用兄弟选择器 ，当前选中元素的向下的所有兄弟元素*/</span><br><span class="line">.active ~ p&#123;</span><br><span class="line">	background-color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3、结构伪类选择器"><a href="#2-3、结构伪类选择器" class="headerlink" title="2.3、结构伪类选择器"></a>2.3、结构伪类选择器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/* ul的第一个子元素 */</span><br><span class="line">ul li:first-child&#123;</span><br><span class="line">    background-color: aqua;</span><br><span class="line">&#125;</span><br><span class="line">/* ul的最后一个子元素 */</span><br><span class="line">ul li:last-child&#123;</span><br><span class="line">    background-color: blueviolet;</span><br><span class="line">&#125;</span><br><span class="line">/* 选中p1 : 定位到父元素，选择当前的第括号内个元素</span><br><span class="line">选择当前p元素的第父级元素，选中父级元素的第一个，并且是当前指定元素</span><br><span class="line">才能生效</span><br><span class="line">*/</span><br><span class="line">p:nth-child(2)&#123;</span><br><span class="line">    background-color: aquamarine;</span><br><span class="line">&#125;</span><br><span class="line">/* 选中父元素，下的p元素的第二个,按照类型选择 */</span><br><span class="line">p:nth-of-type(2)&#123;</span><br><span class="line">    background-color: greenyellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4、属性选择器（常用的昂）"><a href="#2-4、属性选择器（常用的昂）" class="headerlink" title="2.4、属性选择器（常用的昂）"></a>2.4、属性选择器（常用的昂）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    /* 后代选择器 */</span><br><span class="line">    .demo a&#123;</span><br><span class="line">        float: left;</span><br><span class="line">        display: block;</span><br><span class="line">        height: 50px;</span><br><span class="line">        width: 50px;</span><br><span class="line">        border-radius: 12px;</span><br><span class="line">        background-color: blueviolet;</span><br><span class="line">        text-align: center;</span><br><span class="line">        color: aliceblue;</span><br><span class="line">        text-decoration: none;/*去掉下划线*/</span><br><span class="line">        font: bold 20px/50px Arial;</span><br><span class="line">    &#125;</span><br><span class="line">    /* 选中存在id属性的元素</span><br><span class="line">    属性名 = 属性值(这个值可以填正则，有点牛批)</span><br><span class="line"></span><br><span class="line">    = 表示绝对等于</span><br><span class="line">    *= 表示通配，含有就行</span><br><span class="line">    ^= 以这个开头</span><br><span class="line">    $= 以这个结尾,</span><br><span class="line">    a标签带有id属性的</span><br><span class="line">        a[id]&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    */</span><br><span class="line">    /* a[id = first]&#123;</span><br><span class="line">        background-color: yellow;</span><br><span class="line">    &#125;</span><br><span class="line">     */</span><br><span class="line">     /* 选中class中含有links的元素 */</span><br><span class="line">     /* a[class*=&quot;links&quot;]&#123;</span><br><span class="line">        background-color: yellow;</span><br><span class="line">     &#125; */</span><br><span class="line">     /* 选中href中以http开头的元素 */</span><br><span class="line">     a[href$=jpg]&#123;</span><br><span class="line">        background-color: yellow;</span><br><span class="line">     &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=  绝对等于这玩意</span><br><span class="line">*= 包含这个东西</span><br><span class="line">^= 以这个开头</span><br><span class="line">$= 以这个结尾</span><br></pre></td></tr></table></figure>
+
+<p><strong>选择器在</strong></p>
+<p><strong>CSS</strong></p>
+<p><strong>JS</strong></p>
+<p><strong>JQUERY</strong></p>
+<p><strong>VUE中全都有用，ca</strong></p>
+<h2 id="3、美化网页元素"><a href="#3、美化网页元素" class="headerlink" title="3、美化网页元素"></a>3、美化网页元素</h2><h3 id="3-1、为什么要美化网页"><a href="#3-1、为什么要美化网页" class="headerlink" title="3.1、为什么要美化网页"></a>3.1、为什么要美化网页</h3><p><strong>1、有效的传递页面信息</strong></p>
+<p><strong>2、美化网页，页面漂亮，才能吸引用户</strong></p>
+<p><strong>3、凸显页面的猪蹄</strong></p>
+<p><strong>4、提高用户的体验</strong></p>
+<p><strong>span标签：重点要突出的字，使用span标签扩起来</strong></p>
+<h3 id="3-2、字体样式"><a href="#3-2、字体样式" class="headerlink" title="3.2、字体样式"></a>3.2、字体样式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 字体风格</span><br><span class="line">      font-family 字体</span><br><span class="line">      font-size 字体大小</span><br><span class="line">      font- weight 字体粗细</span><br><span class="line">      color 字体颜色</span><br><span class="line"> --&gt;</span><br><span class="line"> &lt;style&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     p&#123;</span><br><span class="line">         color: rgb(0, 0, 0);</span><br><span class="line">         /* font:oblique bolder 24px &quot;楷体&quot; */</span><br><span class="line">         font-weight: bolder;</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line"> &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3、文本样式"><a href="#3-3、文本样式" class="headerlink" title="3.3、文本样式"></a>3.3、文本样式</h3><p><strong>1、颜色</strong></p>
+<p><strong>color</strong></p>
+<p><strong>2、文本对其的方式</strong></p>
+<p><strong>text-align &#x3D; center</strong></p>
+<p><strong>3、首行缩进</strong></p>
+<p><strong>text-indent</strong></p>
+<p><strong>4、行高</strong></p>
+<p><strong>line-height</strong></p>
+<p><strong>5、装饰</strong></p>
+<p><strong>text-decoration</strong></p>
+<h3 id="3-4、阴影"><a href="#3-4、阴影" class="headerlink" title="3.4、阴影"></a>3.4、阴影</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* text-shadow: 阴影颜色，水平偏移，垂直偏移，阴影半径 */</span><br><span class="line">#price&#123;</span><br><span class="line">	text-shadow: rgb(111, 108, 108) 5px 5px 3px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-5、超链接伪类"><a href="#3-5、超链接伪类" class="headerlink" title="3.5、超链接伪类"></a>3.5、超链接伪类</h3><p><strong>正常情况下,a,</strong></p>
+<p><strong>a:hover</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a:hover&#123;/*鼠标悬停*/</span><br><span class="line">	color: rgb(29, 46, 228);</span><br><span class="line">	font-size: 24;</span><br><span class="line">&#125;</span><br><span class="line">a:active&#123;/*鼠标点击的时候*/</span><br><span class="line">	color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-6、列表"><a href="#3-6、列表" class="headerlink" title="3.6、列表"></a>3.6、列表</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/* ul li */</span><br><span class="line">ul li&#123;</span><br><span class="line">    height: 30px;</span><br><span class="line">    list-style: none;/*把前面的点给删除掉,circle就是空心圆,decimal数字,square正方形*/</span><br><span class="line">    text-indent: 1em;</span><br><span class="line">    background-color: rgb(218, 213, 213);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-7、背景"><a href="#3-7、背景" class="headerlink" title="3.7、背景"></a>3.7、背景</h3><p><strong>背景颜色</strong></p>
+<p><strong>背景图片</strong></p>
+<h3 id="3-8、渐变"><a href="#3-8、渐变" class="headerlink" title="3.8、渐变"></a>3.8、渐变</h3><p><strong>linear-gradient</strong></p>
+<h2 id="4、盒子模型"><a href="#4、盒子模型" class="headerlink" title="4、盒子模型"></a>4、盒子模型</h2><h3 id="4-1、什么是盒子模型"><a href="#4-1、什么是盒子模型" class="headerlink" title="4.1、什么是盒子模型"></a>4.1、什么是盒子模型</h3><p><strong>margin：外边距</strong></p>
+<p><strong>padding：内边距</strong></p>
+<p><strong>border：边距</strong></p>
+<h3 id="4-2、边框"><a href="#4-2、边框" class="headerlink" title="4.2、边框"></a>4.2、边框</h3><p><strong>1、边框的粗细</strong></p>
+<p><strong>2、边框的样式</strong></p>
+<p><strong>3、边框的颜色</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    #box&#123;</span><br><span class="line">        width: 300px;</span><br><span class="line">        border: 1px solid red;</span><br><span class="line">    &#125;</span><br><span class="line">   h1,ul,li,a,body&#123;</span><br><span class="line">        /*body总有一个默认的外边距为8,可以手动设置为0*/</span><br><span class="line">        margin: 0;</span><br><span class="line">        padding: 0;</span><br><span class="line">        text-decoration: none;</span><br><span class="line">    &#125;</span><br><span class="line">    form&#123;</span><br><span class="line">        background-color: rgb(204, 195, 195);</span><br><span class="line">    &#125;</span><br><span class="line">    div:nth-of-type(1) input&#123;</span><br><span class="line">        border: 3px solid powderblue;</span><br><span class="line">    &#125;</span><br><span class="line">    h2&#123;</span><br><span class="line">        text-align: center;</span><br><span class="line">        line-height: 50px;</span><br><span class="line">        height: 50px;</span><br><span class="line">        margin: 0;/*这个东西好关键*/</span><br><span class="line">        background-image:radial-gradient(18% 28% at 24% 50%, #CEFAFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 80% 72%, #FFFFFF59 8%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #73F2FFFF 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%),linear-gradient(125deg, #4EB5FFFF 1%, #4C00FCFF 100%);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3、外边距"><a href="#4-3、外边距" class="headerlink" title="4.3、外边距"></a>4.3、外边距</h3><h2 id="5、浮动"><a href="#5、浮动" class="headerlink" title="5、浮动"></a>5、浮动</h2><h3 id="5-1、标准文档流"><a href="#5-1、标准文档流" class="headerlink" title="5.1、标准文档流"></a>5.1、标准文档流</h3><p><strong>块级元素：独占一行</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1~h6  p    div  列表.....</span><br></pre></td></tr></table></figure>
+
+<p><strong>行内元素：不独占一行</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">span 	a 	  img      strong  </span><br></pre></td></tr></table></figure>
+
+<p><strong>行内元素   可以被包含在块级元素中，反之，则不可以~</strong></p>
+<h3 id="5-2、display"><a href="#5-2、display" class="headerlink" title="5.2、display"></a>5.2、display</h3><h3 id="5-3、float"><a href="#5-3、float" class="headerlink" title="5.3、float"></a>5.3、float</h3><h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="1、什么是JavaScript"><a href="#1、什么是JavaScript" class="headerlink" title="1、什么是JavaScript"></a>1、什么是JavaScript</h2><h2 id="2、快速入门"><a href="#2、快速入门" class="headerlink" title="2、快速入门"></a>2、快速入门</h2><h3 id="2-1、"><a href="#2-1、" class="headerlink" title="2.1、"></a>2.1、</h3><h3 id="2-2、"><a href="#2-2、" class="headerlink" title="2.2、"></a>2.2、</h3><h3 id="2-3、数据类型"><a href="#2-3、数据类型" class="headerlink" title="2.3、数据类型"></a>2.3、数据类型</h3><p><strong>数值，文本，图形，音频，视频</strong></p>
+<p><strong>number</strong></p>
+<p><strong>js不区分小数和整数，Number</strong></p>
+<h2 id="3、数据类型"><a href="#3、数据类型" class="headerlink" title="3、数据类型"></a>3、数据类型</h2><h3 id="3-1、字符串"><a href="#3-1、字符串" class="headerlink" title="3.1、字符串"></a>3.1、字符串</h3><p><strong>1、正常字符串我们使用单引号或者双引号包裹</strong></p>
+<p><strong>2、注意转义字符 \ ，</strong></p>
+<h2 id="4、函数"><a href="#4、函数" class="headerlink" title="4、函数"></a>4、函数</h2><h3 id="4-1、定义函数"><a href="#4-1、定义函数" class="headerlink" title="4.1、定义函数"></a>4.1、定义函数</h3><p><strong>定义方式一：</strong></p>
+<p><strong>绝对值函数</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function abs(x)&#123;</span><br><span class="line">    if(x &gt;= 0)&#123;</span><br><span class="line">        return x;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return -x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>一旦执行到return代表函数结束，返回结果！</strong></p>
+<p><strong>如果没有执行return，函数执行完也会返回结果，结果就是undefined</strong></p>
+<p><strong>定义方式二：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var abs = function(x)&#123;</span><br><span class="line">    if(x &gt;= 0)&#123;</span><br><span class="line">        return x;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return -x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>function(x){…},这是一个匿名函数，但是可以把结果复制给abs，通过abs就可以调用函数！</strong></p>
+<p><strong>调用函数：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abs(10)	 //10</span><br><span class="line">abs(-10) //10</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数问题：JavaScript 可以传任意个参数，也可以不传递参数</strong></p>
+<p><strong>参数放进来是否存在的问题？假设不存在参数，如何规避？</strong></p>
+<p><strong>参数存在多个的问题？</strong></p>
+<p>**1.**<strong>arguments</strong></p>
+<p><strong>arguments</strong>是一个JS免费赠送的关键字,它代表传递进来的所有的参数，是一个数组</p>
+<p><strong>arguments包含所有的参数，我们有时候想使用多余的参数来进行附加操作，需要排除已有的参数~</strong></p>
+<p>**2.**<strong>rest</strong></p>
+<p><strong>ES6引入的新特性，获取除了已经定义的参数之外的所有参数~….</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function aaa(a,b,...rest)&#123;</span><br><span class="line">    console.log(&#x27;a=&gt;&#x27; + a)</span><br><span class="line">    console.log(&#x27;b=&gt;&#x27; + b)</span><br><span class="line">    console.log(rest)</span><br><span class="line">&#125;</span><br><span class="line">aaa(1,2,63,645,45,4,&#x27;das&#x27;,&quot;sad&quot;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2、变量的作用域"><a href="#4-2、变量的作用域" class="headerlink" title="4.2、变量的作用域"></a>4.2、变量的作用域</h3><p><strong>JavaScript中，函数查找变量从自身函数开始，由内向外查找，假设外部存在有同名的函数变量，则内部函数会屏蔽外部函数的变量</strong></p>
+<p><strong>提升变量的作用域</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function qj() &#123;</span><br><span class="line">    var x = &#x27;x&#x27; + y;</span><br><span class="line">    console.log(x);</span><br><span class="line">    var y = &#x27;y&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">qj()</span><br></pre></td></tr></table></figure>
+
+<p><strong>结果：xundefined</strong></p>
+<p><strong>说明：js执行引擎，自动提升了y的声明 ，但是不会提升变量y的赋值</strong></p>
+<p><strong>相当于是这样的：</strong></p>
+<pre class="md-fences mock-cm md-end-block" spellcheck="false" lang="javascript" cid="n212" mdtype="fences"><br/>function qj() {<br/>    var y;<br/>    var x = 'x' + y;<br/>    console.log(x);<br/>    var y = 'y';<br/>}</pre>
+
+<p><strong>这个是在JavaScript建立之初就存在的特性，养成规范：所有的变量定义都放在函数的头部，不要乱放，便于代码维护</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function qj2()&#123;</span><br><span class="line">    var x=1,</span><br><span class="line">    y= x + 1,</span><br><span class="line">    z,i;//undefined</span><br><span class="line">    //之后随意用</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>全局函数</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//全局变量</span><br><span class="line">var x = 1;</span><br><span class="line"></span><br><span class="line">function f()&#123;</span><br><span class="line">	console.log(x);</span><br><span class="line">&#125;</span><br><span class="line">f();</span><br><span class="line">console.log(x)</span><br></pre></td></tr></table></figure>
+
+<p><strong>全局对象window</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var x = &#x27;xxx&#x27;</span><br><span class="line">alert(window.x)</span><br></pre></td></tr></table></figure>
+
+<p><strong>默认所有的全局变量，都会自动绑定在window对象下</strong></p>
+<p><strong>alert()这个函数本身也是一个</strong> <code>window</code>的变量</p>
+<p><strong>JavaScript实际上只有一个全局作用域,任何变量（函数也可以视为变量），假设没有在函数作用范围内找到，就会向外查找，如果在全局作用域都没有找到，就会报错 RefrenceError</strong></p>
+<p><strong>规范</strong></p>
+<p><strong>由于我们所有的全局变量都会绑定到我们的window上，如果不同的js文件，使用了相同的全局变量，就会带来冲突</strong></p>
+<p><strong>那么如何减少冲突呢？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//唯一的全局变量</span><br><span class="line">var kuangAPP = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">//定义全局变量</span><br><span class="line">kuangAPP.name = &#x27;狂神&#x27;;</span><br><span class="line">kuangAPP.add = function (a,b)&#123;</span><br><span class="line">    return a+b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>把自己的代码全部放入自己定义的唯一命名空间中</strong></p>
+<p><strong>，jQuery就是这样干的</strong></p>
+<p><strong>局部作用域let</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function aaa()&#123;</span><br><span class="line">for (let i = 0; i &lt; 100; i++) &#123;</span><br><span class="line">    console.log(i)</span><br><span class="line">&#125;</span><br><span class="line">console.log(i+1)</span><br><span class="line">&#125;</span><br><span class="line">aaa()</span><br></pre></td></tr></table></figure>
+
+<p><strong>for循环里面使用let定义i，那么console.log(i+1)这个就会报错，</strong></p>
+<p><strong>但是如果使用var全局作用域，就不会报错，会顺利执行该行代码在控制台中输出101</strong></p>
+<p><strong>建议大家都使用let去定义局部作用域的变量</strong></p>
+<p><strong>常量const</strong></p>
+<p><strong>在ES6之前，怎么定义常量：只要用全部大写字母命名的变量就是常量：建议不要修改这样的值</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var PI=&#x27;3.14&#x27;;</span><br><span class="line">console.log(PI);</span><br><span class="line">PI = &#x27;213&#x27;;//可以修改这个值</span><br><span class="line">console.log(PI);</span><br></pre></td></tr></table></figure>
+
+<p>**在ES6引入了常量关键字 **<strong>const</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const PI = &#x27;3.14&#x27;//只读变量</span><br><span class="line">console.log(PI);</span><br><span class="line">PI = &#x27;123&#x27;;//报错，不可修改</span><br><span class="line">console.log(PI);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3、方法"><a href="#4-3、方法" class="headerlink" title="4.3、方法"></a>4.3、方法</h3><p><strong>定义方法</strong></p>
+<p><strong>方法就是把函数放在对象的里面，对象只有两个东西：属性和方法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var kuangshen = &#123;</span><br><span class="line">    name : &#x27;董小姐&#x27;,</span><br><span class="line">    birth : 2020,</span><br><span class="line">    //方法</span><br><span class="line">    age: function()&#123;</span><br><span class="line">        //今年 - 出生的年</span><br><span class="line">        var now = new Date().getFullYear();</span><br><span class="line">        return now - this.birth;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//属性</span><br><span class="line">kuangshen.name</span><br><span class="line">//方法,调用方法的时候一定要带括号</span><br><span class="line">kuangshen.age()</span><br></pre></td></tr></table></figure>
+
+<p><strong>第二种定义方法，就是在对象体外面定义</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function getAge()&#123;</span><br><span class="line">    //今年 - 出生的年</span><br><span class="line">    var now = new Date().getFullYear();</span><br><span class="line">    return now - this.birth;</span><br><span class="line">&#125;</span><br><span class="line">var kuangshen = &#123;</span><br><span class="line">    name : &#x27;董小姐&#x27;,</span><br><span class="line">    birth : 2020,</span><br><span class="line">    //方法</span><br><span class="line">    age: getAge</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//kuangshen.age()  ok</span><br><span class="line">//getAge()   NaN  this就指代window了，window里面肯定没有birth这玩意属性啊，肯定Nan报错</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、内部对象"><a href="#5、内部对象" class="headerlink" title="5、内部对象"></a>5、内部对象</h2><h2 id="6、面向对象编程"><a href="#6、面向对象编程" class="headerlink" title="6、面向对象编程"></a>6、面向对象编程</h2><h2 id="7、操作BOM对象【重点】"><a href="#7、操作BOM对象【重点】" class="headerlink" title="7、操作BOM对象【重点】"></a>7、操作BOM对象【重点】</h2><p><strong>浏览器介绍：</strong></p>
+<p><strong>JavaScript 和浏览器的关系：</strong></p>
+<p><strong>JavaScript诞生就是为了能够让他在浏览器中运行！</strong></p>
+<p><strong>BOM：浏览器对象模型</strong></p>
+<ul>
+<li><strong>IE 6~12</strong></li>
+<li><strong>Chrome</strong></li>
+<li><strong>Safari</strong></li>
+<li><strong>FireFox</strong></li>
+<li><strong>Opera【市场最小的】</strong></li>
+</ul>
+<p><strong>三方</strong></p>
+<ul>
+<li><strong>QQ浏览器</strong></li>
+<li><strong>360浏览器</strong></li>
+</ul>
+<p><strong>window</strong></p>
+<p><strong>window代表浏览器窗口</strong></p>
+<p><strong>Navigator</strong></p>
+<p><strong>Navigator</strong>，封装了浏览器的信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">window.Navigator</span><br><span class="line">ƒ Navigator() &#123; [native code] &#125;</span><br><span class="line"></span><br><span class="line">navigator.appName</span><br><span class="line">&#x27;Netscape&#x27;</span><br><span class="line"></span><br><span class="line">navigator.appVersion</span><br><span class="line">&#x27;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36&#x27;</span><br><span class="line"></span><br><span class="line">navigator.platform</span><br><span class="line">&#x27;Win32&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>大多数时候，我们不会使用navigator对象，因为会被人为修改，</strong></p>
+<p><strong>不建议使用这些属性来判断和编写代码</strong></p>
+<p><strong>screen</strong></p>
+<p><strong>代表屏幕尺寸</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">screen.width</span><br><span class="line">1536</span><br><span class="line">screen.height</span><br><span class="line">864</span><br></pre></td></tr></table></figure>
+
+<p><strong>location</strong>【重要】</p>
+<p><strong>location代表当前页面的url信息</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">host:&quot;www.baidu.com&quot;</span><br><span class="line">href:&quot;https://www.baidu.com/&quot;</span><br><span class="line">protocol:&quot;https:&quot;</span><br><span class="line">reload:f reload()//刷新网页</span><br><span class="line">//设置新的地址</span><br><span class="line">location.assign(&#x27;https://blog.kuangstudy.com&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>document</strong></p>
+<p><strong>document代表当前的页面,HTML  DOM文档树</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">document.title</span><br><span class="line">&#x27;百度一下，你就知道&#x27;</span><br><span class="line">document.title=&#x27;狂神真6&#x27;</span><br><span class="line">&#x27;狂神真6&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>获取具体的文档树(DOM)节点</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl id=&quot;app&quot;&gt;</span><br><span class="line">&lt;dt&gt;Java&lt;/dt&gt;</span><br><span class="line">&lt;dt&gt;JavaSE&lt;/dt&gt;</span><br><span class="line">&lt;dt&gt;JavaEE&lt;/dt&gt;</span><br><span class="line">&lt;/dl&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var shenmedongxi = document.getElementById(&quot;app&quot;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>获取cookie</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.cookie</span><br></pre></td></tr></table></figure>
+
+<p><strong>劫持cookie原理</strong></p>
+<p><a href="www.taobao.com">www.taobao.com</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;aa.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">//而已人员，可以通过在aa.js中写入js代码获取你的cookie，并通过Ajax将你的cookie信息上传到它的服务器当中</span><br></pre></td></tr></table></figure>
+
+<p><strong>服务器端可以设置 cookie:httpOnly</strong></p>
+<p><strong>history</strong>(不建议使用)</p>
+<p><strong>history代表浏览器的历史记录</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">history.back() //后退</span><br><span class="line">undefined</span><br><span class="line">history.forward()//前进</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、操作DOM对象【重点】"><a href="#8、操作DOM对象【重点】" class="headerlink" title="8、操作DOM对象【重点】"></a>8、操作DOM对象【重点】</h2><p><strong>DOM：文档对象模型</strong></p>
+<p><strong>核心</strong></p>
+<p><strong>浏览器网页就是一个Dom树形结构！</strong></p>
+<ul>
+<li><strong>更新：更新Dom结点</strong></li>
+<li><strong>遍历dom节点：得到Dom节点</strong></li>
+<li><strong>删除：删除一个Dom节点</strong></li>
+<li><strong>添加：添加一个新的节点</strong></li>
+</ul>
+<p><strong>要操作一个Dom节点，就必须要先获得这个Dom节点</strong></p>
+<p><strong>获得DOM节点</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var h1 = document.getElementsByTagName(&#x27;h1&#x27;)</span><br><span class="line">var h2 = document.getElementById(&#x27;p1&#x27;);</span><br><span class="line">var h3 = document.getElementsByClassName(&#x27;p2&#x27;);</span><br><span class="line">var father = document.getElementById(&#x27;father&#x27;);</span><br><span class="line">var children = father.children;//获取父节点下的所有子节点</span><br><span class="line">father.firstChild</span><br><span class="line">father.lastChild</span><br></pre></td></tr></table></figure>
+
+<p><strong>这是原生代码，之后我们尽量都使用jQuery</strong></p>
+<p><strong>更新节点</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var id1 = document.getElementById(&#x27;id1&#x27;)</span><br><span class="line">id1.innerText=(&#x27;456&#x27;)//修改文本的值</span><br><span class="line">id1.innerHTML=&#x27;&lt;strong&gt;123&lt;/strong&gt;&#x27;//可以解析HTML文本标签</span><br></pre></td></tr></table></figure>
+
+<p><strong>操作JS</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var ziti = document.getElementById(&#x27;su&#x27;)</span><br><span class="line">undefined</span><br><span class="line">ziti.style.fontSize=&#x27;200px&#x27;</span><br><span class="line">&#x27;200px&#x27;</span><br><span class="line">ziti.style.color = &#x27;red&#x27;</span><br><span class="line">&#x27;red&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>删除节点</strong></p>
+<p><strong>删除结点的步骤：先获取父节点，再通过父节点删除自己</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;father&quot;&gt;</span><br><span class="line">    &lt;h1&gt;标题一&lt;/h1&gt;</span><br><span class="line">    &lt;p id=&quot;p1&quot;&gt;p1&lt;/p&gt;</span><br><span class="line">    &lt;p class=&quot;p2&quot;&gt;p2&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var father = document.getElementById(&#x27;father&#x27;)</span><br><span class="line">    father.removeChild(p1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    father.removeChild(father.children[0])</span><br><span class="line">    father.removeChild(father.children[1])</span><br><span class="line">    father.removeChild(father.children[2])</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：删除节点的时候，children实在时刻变化的，删除节点的时候一定要注意！</strong></p>
+<p><strong>插入节点</strong></p>
+<p><strong>我们获得了某个Dom节点，假设这个dom节点是空的，我们通过innerHTML就可以增加一个元素了，但是这个DOM节点已经存在元素了，我们就不能这么干了！会产生覆盖.</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=&quot;js&quot;&gt;JavaScript&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;list&quot;&gt;</span><br><span class="line">    &lt;p id=&quot;se&quot;&gt;JavaSE&lt;/p&gt;</span><br><span class="line">    &lt;p id=&quot;ee&quot;&gt;JavaEE&lt;/p&gt;</span><br><span class="line">    &lt;p id=&quot;me&quot;&gt;JavaME&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var js = document.getElementById(&#x27;js&#x27;);</span><br><span class="line">    var list = document.getElementById(&#x27;list&#x27;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>list.appendChild(js)</strong></p>
+<p><strong>使用这行代码可以让上面那个p标签挪到下面的div中去</strong></p>
+<p><strong>创建一个新的标签，实现插入</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//创建一个新的节点</span><br><span class="line">var newP = document.createElement(&#x27;p&#x27;);//创建一个p标签</span><br><span class="line">newP.id = &#x27;newP&#x27;;</span><br><span class="line">newP.innerText = &#x27;Hello KuangShen&#x27;</span><br><span class="line">list.appendChild(newP)</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意这里使用getElementsByTagName返回的是一个数组玩意，必须指定下标为0，表示找到的这个标签的第一个该标签</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var body2 = document.getElementsByTagName(&#x27;body&#x27;);</span><br><span class="line">body2[0].style.backgroundColor = &#x27;gray&#x27;</span><br><span class="line">body2[0].style.color = &#x27;red&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="9、操作表单（验证）"><a href="#9、操作表单（验证）" class="headerlink" title="9、操作表单（验证）"></a>9、操作表单（验证）</h2><p><strong>表单是什么 form DOM树</strong></p>
+<ul>
+<li><strong>文本框   text</strong></li>
+<li><strong>下拉框  select</strong></li>
+<li><strong>单选框   radio</strong></li>
+<li><strong>多选框   checkbox</strong></li>
+<li><strong>隐藏域   hidden</strong></li>
+<li><strong>密码框    password</strong></li>
+<li><strong>range滑块</strong></li>
+<li><strong>…….</strong></li>
+</ul>
+<p><strong>表单的目的：提交信息</strong></p>
+<p><strong>获得要提交的信息</strong></p>
+<h1 id="前端偷懒框架网"><a href="#前端偷懒框架网" class="headerlink" title="前端偷懒框架网"></a>前端偷懒框架网</h1><h2 id="Element-ui"><a href="#Element-ui" class="headerlink" title="Element-ui"></a>Element-ui</h2><p><span class="exturl" data-url="aHR0cHM6Ly9lbGVtZW50LmVsZW1lLmNuLyMvemgtQ04=">Element - 网站快速成型工具<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>阿里的</strong></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9hbnQuZGVzaWduL2luZGV4LWNuLw==">https://ant.design/index-cn/<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>飞冰</strong></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9pY2V0ZWFtLmdpdGVlLmlvLw==">飞冰-基于 React 的研发解决方案 | 飞冰 (gitee.io)<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>layer弹窗组件</strong></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9sYXllci5qaWFud29vLmNuLw==">layer 弹出层组件 - jQuery 弹出层插件 (jianwoo.cn)<i class="fa fa-external-link-alt"></i></span>妹子ui</p>
+<p><span class="exturl" data-url="aHR0cDovL2FtYXpldWkuc2hvcHhvLm5ldC8=">http://amazeui.shopxo.net/<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>图标网</strong></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20uY24v">https://fontawesome.com.cn/<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9mb250YXdlc29tZS5jb20v">Font Awesome<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><h2 id="1-运行别人的项目"><a href="#1-运行别人的项目" class="headerlink" title="1.运行别人的项目"></a>1.运行别人的项目</h2><p><strong>下载下来之后没有node_modules目录，但是只要有package.json文件，就可以直接在终端运行****npm install</strong>命令，他会自动下载该项目所需组件并且<strong>自动创建</strong>node_modules目录</p>
+<p><strong>2.Vue router的children属性如果失效，需要在父页面添加</strong> <code>&lt;router-view/&gt;</code><strong>占位符</strong>，千万别忘记了</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://dddzzz-1316859603.cos.ap-nanjing.myqcloud.com/PicGoD7031CAB7FE9599C2943893EF7F972A5.jpg" alt="五陵花柳满秦川 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/03/10/SSM/" rel="prev" title="SSM三大框架学习笔记">
+                  <i class="fa fa-chevron-left"></i> SSM三大框架学习笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian">
+     <a target="_blank" rel="noopener" href='https://www.douyin.com'><img src="https://dddzzz-1316859603.cos.ap-nanjing.myqcloud.com/PicGo%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png" alt=""></a><span class="exturl" data-url="aHR0cDovL3BvbGljZS54YS5nb3YuY24v">陕西省西安市公安局 </span>
+  </div>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-code"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CHD-五陵花柳满秦川</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0x2TWlrYXNh" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
